@@ -2,7 +2,7 @@ local Config = {}
 
 Config.config = {
 	register = "+",
-	keymap_default = "<leader>cp",
+	keymap_default = "<leader>cpp",
 	keymap_absolute = "<leader>cpa",
 	keymap_relative = "<leader>cpr",
 	default_path = "absolute",
