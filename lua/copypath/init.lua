@@ -1,5 +1,5 @@
-local config = require("config")
-local api = require("api")
+local config = require("copypath.config")
+local api = require("copypath.api")
 local M = {}
 
 function M.setup(cfg)
