@@ -1,16 +1,16 @@
-# 📋 lameck-copypath.nvim
+# lameck-copypath.nvim
 
 A lightweight Neovim plugin to quickly copy file paths to your clipboard.
 
-## ✨ Features
+## Features
 
-- 📁 Copy absolute file paths
-- 📂 Copy relative file paths
-- ⚡ Fast and minimal
-- ⌨️ Customizable keybindings
-- 🎨 Full LSP type annotations
+- Copy absolute file paths
+- Copy relative file paths
+- Fast and minimal
+- Customizable keybindings
+- Full LSP type annotations
 
-## 📦 Installation
+## Installation
 
 ### [lazy.nvim](https://github.com/folke/lazy.nvim)
 
@@ -38,7 +38,7 @@ A lightweight Neovim plugin to quickly copy file paths to your clipboard.
 }
 ```
 
-## 🚀 Usage
+## Usage
 
 ### Commands
 
@@ -56,7 +56,7 @@ A lightweight Neovim plugin to quickly copy file paths to your clipboard.
 | `<leader>cpa` | `:CopyAbsolutePath` | Copy absolute path |
 | `<leader>cpr` | `:CopyRelativePath` | Copy relative path |
 
-## ⚙️ Configuration
+## Configuration
 
 ### Default Configuration
 
@@ -103,7 +103,7 @@ require("copypath").setup({
 })
 ```
 
-## 📝 Path Types
+## Path Types
 
 - **Absolute**: Full path from root
 
@@ -117,6 +117,6 @@ require("copypath").setup({
   src/main.lua
   ```
 
-## 📄 License
+## License
 
 MIT
