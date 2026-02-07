@@ -2,8 +2,10 @@ local Config = {}
 
 Config.config = {
 	register = "+",
+	keymap_default = "<leader>cp",
 	keymap_absolute = "<leader>cpa",
 	keymap_relative = "<leader>cpr",
+	default_path = "absolute",
 }
 
 function Config:get()
@@ -11,6 +13,9 @@ function Config:get()
 end
 
 function Config:set(cfg)
+	if cfg.default_path and cfg.default_path ~= "absolute" and cfg.default_path ~= "relative" then
+		error("default must be 'absolute' or 'relative'")
+	end
 	self.config = vim.tbl_deep_extend("force", self.config, cfg)
 end
 

@@ -23,7 +23,22 @@ function M.setup(cfg)
 		desc = "Copy relative path of current file",
 	})
 
+	vim.api.nvim_create_user_command("CopyPath", function()
+		local cf = config:get()
+
+		local path = api.copy_relative_path(cf)
+		if cf.default_path == "absolute" then
+			path = api.copy_absolute_path(cf)
+		end
+
+		print("Copied: " .. path)
+	end, {
+		desc = "Copy path to clipboard",
+	})
+
 	local cfg_final = config:get()
+
+	vim.keymap.set("n", cfg_final.keymap_default, "<cmd>CopyPath<cr>", { desc = "Copy path" })
 	vim.keymap.set("n", cfg_final.keymap_absolute, "<cmd>CopyAbsolutePath<cr>", { desc = "Copy absolute path" })
 	vim.keymap.set("n", cfg_final.keymap_relative, "<cmd>CopyRelativePath<cr>", { desc = "Copy relative path" })
 end
