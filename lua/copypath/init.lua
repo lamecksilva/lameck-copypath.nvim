@@ -27,10 +27,9 @@ function M.setup(cfg)
 
 	vim.api.nvim_create_user_command("CopyPath", function()
 		local current_cfg = config:get()
-		print("DEBUG: default_path = " .. vim.inspect(current_cfg.default_path))
 		local path = current_cfg.default_path == "absolute" and api.copy_absolute_path(current_cfg)
 			or api.copy_relative_path(current_cfg)
-		-- print("Copied: " .. path)
+		print("Copied: " .. path)
 	end, {
 		desc = "Copy path to clipboard",
 	})
