@@ -1,4 +1,5 @@
 local config = require("config")
+local api = require("api")
 local M = {}
 
 function M.setup(cfg)
@@ -8,7 +9,12 @@ function M.setup(cfg)
 
 	config:set(cfg)
 
-	print("config loaded")
+	vim.api.nvim_create_user_command("CopyPath", function()
+		local path = api.copy_absolute_path(config:get())
+		print("Copied " .. path)
+	end, {
+		desc = "Copy path of current file",
+	})
 end
 
 return M
