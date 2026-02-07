@@ -2,6 +2,7 @@ local config = require("copypath.config")
 local api = require("copypath.api")
 local M = {}
 
+---@param cfg CopypathConfig?
 function M.setup(cfg)
 	if cfg == nil then
 		cfg = {}

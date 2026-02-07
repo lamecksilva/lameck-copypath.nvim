@@ -1,5 +1,13 @@
+---@class CopypathConfig
+---@field register string Vim register to use (default: "+")
+---@field default_path "absolute"|"relative" Default path type (default: "absolute")
+---@field keymap_default string Keymap for default copy (default: "<leader>cp")
+---@field keymap_absolute string Keymap for absolute path (default: "<leader>cpa")
+---@field keymap_relative string Keymap for relative path (default: "<leader>cpr")
+
 local Config = {}
 
+---@type CopypathConfig
 Config.config = {
 	register = "+",
 	keymap_default = "<leader>cpp",
