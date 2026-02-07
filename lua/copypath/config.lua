@@ -2,6 +2,8 @@ local Config = {}
 
 Config.config = {
 	register = "+",
+	keymap_absolute = "<leader>cpa",
+	keymap_relative = "<leader>cpr",
 }
 
 function Config:get()
